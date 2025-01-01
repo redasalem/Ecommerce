@@ -10,3 +10,6 @@ document.querySelectorAll('.add-to-card-btn').forEach(function (el) {
        window.alert("اضيف المنتج الى عربة الشراء");
     }
  });
+
+ const currentYear = new Date().getFullYear();
+ document.getElementById('copyright').textContent =`جميع الحقوق محفوظة لمتجر لسنة ${currentYear}`;
