@@ -31,6 +31,56 @@ document.querySelectorAll('.size-option input[type="radio"]').forEach(function(e
    })
   });
                     //    ---------------------------------------
+             // المنتج اجمالى سعر حساب 
+
+      document.querySelectorAll("[data-product-qunatity]").forEach(function(item){
+         item.addEventListener('change',function(){
+            const qunatity3 = item.value;
+            const parent=item.closest("[data-product-info]")//tr كدا تم الوصول للعنصر الاب 
+            const price4=parent.getAttribute("data-product-price");//data-product-price='400' وبما ان وصلتله هاخد منه 
+            const total=qunatity3 * price4 //(القيمة المختارة (value) * 400) => (data-product-price='400')
+            parent.querySelector(".total-price-for-product").innerHTML=total+"$"// سوف اضعها فى الخلية الخاصه بالسعر الاجمالى  total القيمة الناتجة من العنصر 
+           
+            calcprice();
+         })
+      })  
+
+      document.querySelectorAll("[data-remove-from-card]").forEach((item)=>{
+         item.addEventListener('click',()=>{
+            item.closest("[data-product-info]").remove();
+            calcprice();
+            
+
+         })
+      })
+      function calcprice(){
+         let totalAllprice=0;
+            document.querySelectorAll("[data-product-info]").forEach(function(product){
+            const price5 = product.getAttribute("data-product-price")
+            const qunatity5=product.querySelector("[data-product-qunatity]").value;
+            const totalPrice=price5*qunatity5;
+            totalAllprice=totalAllprice + totalPrice;
+            })
+            document.querySelector("#total-price-of-all-product").innerHTML=totalAllprice+"$";
+
+      }
+
+     
+   
+
+
+
+
+
+
+    
+   
+
+
+
+
+
+
 
 
  const currentYear = new Date().getFullYear();
