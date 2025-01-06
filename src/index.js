@@ -65,7 +65,55 @@ document.querySelectorAll('.size-option input[type="radio"]').forEach(function(e
 
       }
 
-     
+      /// اختيار الدولة بالمدن الخاصه بها------------------------
+      const cityesBycountry= {
+         Eg:["القاهرة","الاسكندرية"],
+         Sa:["جدة","الرياض"], 
+         Jo:["الزرقاء","عمان"],
+         Sy:["دمشق","حلب"]
+      }
+      document.querySelectorAll("[data-bs-country]").forEach(item =>{
+         item.addEventListener('change',()=>{
+            const country=item.value  //sa , Eg ,jo, sy المتغير هنا اما سيكون 
+            const citys=cityesBycountry[country]// وعلى حسب القيم التى فى الكائن سيختار المدن المقابله لكل قيمة (دولة)
+            document.querySelectorAll("#paymentcities option").forEach(option =>option.remove()) // سيتم حذف العناصر المختارة لدى المدينه 
+            const firistoption=document.createElement('option')
+            const optiontext=document.createTextNode('اختر مدينه')
+            firistoption.appendChild(optiontext)
+            firistoption.setAttribute('value', '')
+            firistoption.setAttribute('disabled','true')
+            firistoption.setAttribute('selected','true')
+            const city_option=document.getElementById('paymentcities')
+            city_option.appendChild(firistoption)
+            citys.forEach(city =>{
+               const newoption=document.createElement('option')
+               const optionnewtext=document.createTextNode(city)
+               newoption.appendChild(optionnewtext)//option سيتم اضافه قيمة الاختيار الى عنصر 
+               newoption.setAttribute('value',city)
+               city_option.appendChild(newoption)
+
+            })
+
+         })
+      })
+
+      // -----------------------------------------------------------------------------------
+      //اظهار واخفاء حقوق البطاقة الائتمانية
+      document.querySelectorAll('input[name="payment_method"]').forEach(i=>{
+         i.addEventListener('change',()=>{
+            const paymentmethod=i.value;
+            const cardinputs=document.querySelectorAll("#credit-card-info input");
+            if(paymentmethod==="on-delivery"){
+               cardinputs.forEach(item=>{
+                  item.style.display="none"
+               })
+            }else{
+               cardinputs.forEach(item=>{
+                  item.style.display="block"
+               })
+            }
+         })
+      })
    
 
 
