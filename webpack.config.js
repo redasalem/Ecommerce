@@ -95,6 +95,10 @@ module.exports = {
       filename:"payment.html",
       template:"./src/payment.html"
     }),
+    new  HtmlWebpackPlugin ({
+      filename:"search.html",
+      template:"./src/search.html"
+    }),
 
 
     new MiniCssExtractPlugin({

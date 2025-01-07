@@ -238,7 +238,7 @@ body {
 }
 
 .custom-thumbnail img {
-    height: 250px;
+   max-height:250px ; 
     width: 100%;
     max-width: 250px;
 }
@@ -657,6 +657,58 @@ text-align: center;
 .custom-input-details:focus{
     border-color:#776750;
 }
+/* ----------------------search page----------------- */
+.form-advenced-search{
+    border:1px solid #ebebeb;
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+    height:fit-content;
+
+}
+.form-advenced-search .panel{
+    border: none;
+    padding: 5px;
+}
+.panel .card-header{
+    background-color: transparent;
+    margin-bottom: 15px;
+    padding: 13px;
+}
+.custom-list-group .list-group-item{
+    border: none;
+}
+.custom-list-group{
+    border-bottom: 1px solid #ebebeb;
+ 
+}
+.custom-list-group .list-group-item label{
+    cursor: pointer;
+    font-weight: bold;
+}
+.custom-Pagination .page-link{
+    margin: 0 3px !important;
+    border: 1px solid #ebebeb !important;
+    width: 32px !important;
+    height: 32px !important;
+    color: #c2c2c2 !important;
+    text-decoration: none !important;
+    outline: none !important;
+    transition: all 0.3s ease !important;
+}
+.custom-Pagination .page-item.active .page-link{
+    background-color: #fbad47 !important;
+    color: white !important;
+    border-color:#fbad47 !important ;
+}
+.custom-Pagination .page-link:active,
+.custom-Pagination .page-link:focus,
+.custom-Pagination .page-link:hover{
+color:#fbad47 !important ;
+background-color: #fff !important;
+border-color:  #fbad47 !important;
+
+}
+
 
 
 
@@ -780,6 +832,11 @@ text-align: center;
         font-size: 20px;
 
 
+    }
+    .search-Pagination{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 }
