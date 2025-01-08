@@ -708,6 +708,51 @@ background-color: #fff !important;
 border-color:  #fbad47 !important;
 
 }
+#conection-info h3.head-contact{
+    color: #313131;
+}
+.contact-info{
+    padding:13px 5px ;
+}
+.contact-info  span.icon-phone {
+    color: #fbad47 !important;
+    font-size: 15px;
+}
+.contact-info  span.tex-info{
+    font-size: 20px;
+  
+}
+#conection-info{
+    margin-bottom: 35px;
+}
+#generl-info{
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+}
+#conection-info2 input{
+    height: 44px;
+    padding: 0 10px;
+    margin-right: 15px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+#textarea-info{
+    width: 66%;
+    margin-right: 16px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 10px;
+    height: 195px;
+
+}
+button#btn-conact-info{
+    position: relative;
+    left: -46%;
+    font-weight: 700;
+}
 
 
 
@@ -736,6 +781,9 @@ border-color:  #fbad47 !important;
 
     #carousel-featured .carousel-indicators {
         margin-right: 12%;
+    }
+    #conection-info2 input{
+        margin-bottom: 20px;
     }
 }
 
@@ -889,6 +937,10 @@ border-color:  #fbad47 !important;
     .hide-on-small{
         display: none;
     }
+    #textarea-info{
+        width: 87%;
+    }
+
 
 
 
@@ -902,6 +954,14 @@ border-color:  #fbad47 !important;
     #form-product-selection,
     .comments {
         padding-right: 15px;
+    }
+    #conection-info2 input{
+        margin-bottom: 20px;
+        width: 90%;
+        
+    }
+    #textarea-info{
+        width: 90%;
     }
 
 }
