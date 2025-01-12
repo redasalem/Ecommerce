@@ -1,0 +1,48 @@
+.custom-table {
+
+    h4 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    th {
+        color: #c2c2c2;
+        font-size: normal;
+    }
+    
+
+    th,
+    td {
+        padding: 15px;
+        font-size: 120%;
+        vertical-align: middle;
+        border-bottom: 1px solid #ebebeb;
+        border-top: 1px solid #ebebeb;
+
+        &:first-child{
+            width: 50%;
+        }
+
+        &:not(:first-child){
+            text-align: center;
+
+        }
+
+
+
+    }
+
+ 
+  
+    tfoot{
+        td {
+            border-bottom: none;
+            font-size: 150%;
+        }
+    }
+
+
+}
+
+
+

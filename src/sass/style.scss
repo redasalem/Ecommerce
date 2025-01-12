@@ -1,0 +1,70 @@
+
+@import'./varibles';
+@import'./custom_table';
+@import'./mixins';
+@import'./custom_thumbanil';
+    
+
+.custom-form-contorl,
+.custom-btn {
+    border: 1px solid #f7f8f3;
+    box-shadow: none;
+    border-radius: 2px;
+    color: #868686;
+    outline: none;
+    height: 38px;
+    padding: 6px 16px 7px;
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #d4d4d4;
+    color: $btn-danger-color-dark;
+    border: 1px solid #8c8c8c;
+}
+
+.custom-btn:focus {
+    color: $btn-danger-color-dark;
+}
+
+
+.custom-dropdown-menu {
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 #ebebeb;
+    color: #777;
+}
+
+.custom-btn-outline-warning{
+    @include button-style($brand-warning)
+}
+.custom-btn-outline-danger{
+    @include button-style($brand-danger)
+
+}
+
+
+.custom-btn-warning {
+    color: #333;
+    background-color: $brand-warning;
+    border-color: $brand-warning;
+
+}
+
+.custom-btn-warning:hover,
+.custom-btn-warning:focus,
+.custom-btn-warning:active,
+.custom-btn-warning:active:hover,
+.custom-btn-warning:active:focus {
+    background-color: $btn-warning-color-dark;
+    border-color: $btn-warning-color-dark;
+
+}
+
+.overlay .add-to-card-btn {
+    color: $brand-primary;
+    background-color: #fff;
+    font-weight: 700;
+
+}
+
+
